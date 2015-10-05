@@ -14,21 +14,17 @@ harmono:
   # Little description about your site
   description: Harmono is free responsive jekyll theme based on harmony.
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
-  # Author details
-  author:
-    name: KuoE0
-    email: kuoe0.tw@gmail.com
-    url: http://kuoe0.github.io
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-xxxx-x
   # Profile links, leave blank to ignore
   social:
+    email: your@email.addr
+    linkedin: linkedin_name
     github: github_name
     twitter: twitter_name
     facebook: facebook_name
-    gplus: +gplus_name
-    dribble: dribble_name
-    pinterest: pinterest_name
+    gplus: gplus_name
+
   # Toggle disclaimer in footer
   show_disclaimer: true
 
