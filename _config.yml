@@ -40,7 +40,7 @@ kramdown:
 highlighter: true
 
 # Permalinks
-permalink: pretty
+permalink: "/posts/:year/:month/:day/:title/"
 
 exclude:
   - CNAME
