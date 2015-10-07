@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Help / FAQ
+permalink: /faq/
 ---
 
 What is harmony?
