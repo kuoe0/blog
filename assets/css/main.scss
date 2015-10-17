@@ -54,10 +54,7 @@ body {
 .wc-img-replace { /* replace text with a background-image */
   display: inline-block;
   overflow: hidden;
-  text-indent: 100%;
   white-space: nowrap;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 
 /* --------------------------------
@@ -292,11 +289,11 @@ footer.main-footer {
     }
 
     li > a {
-      width: 32px;
-      height: 32px;
       background: $base-07;
       border-radius: 0.25em;
       border: none;
+      padding: 5px 3px 5px 3px;
+      color: black;
     }
 
     li a.github {
