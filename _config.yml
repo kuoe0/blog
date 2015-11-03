@@ -28,6 +28,12 @@ harmono:
   # Toggle disclaimer in footer
   show_disclaimer: true
 
+  # Toggle comment system
+  comment: true
+  # Comment system provider
+  disqus:
+    short_name: harmono
+
 # Conversion / Build settings
 markdown: kramdown
 kramdown:
