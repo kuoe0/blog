@@ -35,11 +35,9 @@ harmono:
     short_name: harmono
 
 # Conversion / Build settings
-markdown: kramdown
-kramdown:
-  input: GFM
+markdown: redcarpet
 
-highlighter: true
+highlighter: pygments
 
 # Permalinks
 permalink: "/posts/:year/:month/:day/:title/"

@@ -25,13 +25,13 @@ Duis lacinia commodo dui, vel aliquam metus hendrerit eu. Integer et scelerisque
 
 Example code: 
 
-{% highlight ruby %}
+```ruby
 def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+```
 
 
 A list: 
