@@ -730,3 +730,20 @@ tbody tr:nth-child(odd) th {
   background-color: $base-05;
 }
 
+/* --------------------------------
+
+  Disqus
+
+--------------------------------- */
+
+#disqus_thread {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-top: 1px solid $base-05;
+
+  @include MQ(M) {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
