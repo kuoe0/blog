@@ -1,12 +1,12 @@
 # Harmony Jekyll theme general configurations
 # Base URL
-baseurl: ""
+baseurl: "/harmono"
 
 # Site URL
 # url: http://gayan.me
 
 # Localhost
-url: kuoe0.github.io/harmono
+url: http://kuoe0.github.io
 
 # Harmono theme configuration. Please change accordingly.
 harmono:
