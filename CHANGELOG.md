@@ -1,3 +1,9 @@
+v0.2
+----
+
+- Use redcarpet as Markdown compiler.
+- Add MathJax support.
+
 V0.1
 ----
 
