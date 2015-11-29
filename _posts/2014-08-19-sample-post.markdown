@@ -25,13 +25,29 @@ Duis lacinia commodo dui, vel aliquam metus hendrerit eu. Integer et scelerisque
 
 Example code: 
 
-{% highlight ruby %}
+```ruby
 def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+```
+
+## MathJax Support
+
+Source code:
+
+```
+$$a^2 + b^2 = c^2$$
+$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
+\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]
+```
+
+Will be rendered to:
+
+$$a^2 + b^2 = c^2$$
+$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
+\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]
 
 
 A list: 
