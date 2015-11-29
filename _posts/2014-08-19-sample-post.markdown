@@ -33,6 +33,22 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 ```
 
+## MathJax Support
+
+Source code:
+
+```
+$$a^2 + b^2 = c^2$$
+$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
+\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]
+```
+
+Will be rendered to:
+
+$$a^2 + b^2 = c^2$$
+$$ \mathsf{Data = PCs} \times \mathsf{Loadings} $$
+\\[ \mathbf{X} = \mathbf{Z} \mathbf{P^\mathsf{T}} \\]
+
 
 A list: 
 
