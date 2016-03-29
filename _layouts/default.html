@@ -6,6 +6,9 @@
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.harmono.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.harmono.description }}{% endif %}">
+        {% if page.feature && page.feature.photo %}
+        <meta property="og:image" content="{{ page.feature.photo_url }}" />
+        {% endif %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
         <!-- Harmony styles -->
@@ -13,6 +16,18 @@
 
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
+
+        {% if page.feature && page.feature.photo %}
+        <script>
+        var featurePhoto = {
+          photo_url:   "{{ page.feature.photo_url }}",
+          creator:     "{{ page.feature.creator }}",
+          creator_url: "{{ page.feature.creator_url }}",
+          license:     "{{ page.feature.license }}",
+          license_url: "{{ page.feature.license_url }}"
+        };
+        </script>
+        {% endif %}
 
         <!-- IE Fixes -->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,27 +41,22 @@
 
     </head>
     <body class="{{ site.harmono.basetheme }}">
-        <header class="main-header">
-            <div class="wc-container">
-                <h1><a href="{{ site.baseurl }}/">{{ site.harmono.name }}</a></h1>
-                <h2>{{ site.harmono.description }}</h2>
-                {% include header-links.html %}
-            </div>
-        </header>
-        {{ content }}
-        <footer class="main-footer">
-            <div class="wc-container">
-                <div class="column one">
-                    {% include footer-links.html %}
+        <div id="page-wrapper">
+            {{ content }}
+            <footer class="main-footer">
+                <div class="wc-container">
+                    <div class="column one">
+                        {% include footer-links.html %}
+                    </div>
+                    <div class="column two">
+                        {% include social.html %}
+                    </div>
                 </div>
-                <div class="column two">
-                    {% include social.html %}
-                </div>
-            </div>
-            <p class="wc-container disclaimer">
-                {% include footer.html %}
-            </p>
-        </footer>
+                <p class="wc-container disclaimer">
+                    {% include footer.html %}
+                </p>
+            </footer>
+        </div>
         <script type="text/javascript">
           /* To avoid render blocking css */
           var cb = function() {

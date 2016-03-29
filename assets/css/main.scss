@@ -190,10 +190,13 @@ header.main-header, footer.main-footer {
 }
 
 header.main-header {
-  color: $base-00;
+  color: white;
   border-top: 5px $base-00 solid;
 
-  h1, h2 { text-align: center; color: inherit;}
+  h1, h2 { 
+    text-align: center;
+    color: inherit;
+  }
   a { 
     color: inherit;
     &:hover, &:active, &:focus {
@@ -459,13 +462,6 @@ body.theme-base-01 {
     color: $base-07;
   }
 
-  header.main-header {
-    color: $base-01;
-    ul li { 
-      color: $base-08;
-    }
-  }
-
   div.page-content {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
@@ -481,6 +477,11 @@ body.theme-base-01 {
 
 header.main-header { 
   padding: 1em 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #272935;
   @include MQ(M) { padding: 2em 0; }
 }
 footer.main-footer {
@@ -488,10 +489,20 @@ footer.main-footer {
   @include MQ(M) { padding: 2em 0; }
 }
 .page-content {
+  background-color: white;
   padding: 1em 0;
   @include MQ(M) { padding: 2em 0; }
 }
-
+#page-wrapper {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#title {
+  border-top:    solid 2px white;
+  border-bottom: solid 2px white;
+}
 
 /* ---------------------------------
 
@@ -599,6 +610,7 @@ div.posts {
     
   }
 }
+
 div.post {
   padding-top: .5em;
   padding-bottom: 1em;
@@ -612,6 +624,7 @@ div.post {
     border-bottom: none;
   }
 }
+
 p.post-meta {
   line-height: 1.6;
   letter-spacing: 2px;
@@ -624,9 +637,44 @@ p.post-meta {
     @include font-size(16px);
   }
 }
+.page-content p.post-meta {
+  margin: 0;
+}
+
 div.post img {
   margin-left: auto;
   margin-right: auto;
+}
+
+.post-preview {
+  @include MQ(M) {
+    display: flex;
+    flex-direction: row;
+    max-height: 200px;
+  }
+}
+
+.thumb-photo-block {
+  @include MQ(M) {
+    margin: 0;
+    margin-right: 1em;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+  img.thumb-photo {
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    padding: 0;
+  }
+}
+
+.post-excerpt {
+  max-height: 8em;
+  overflow: hidden;
 }
 
 /* --------------------------------
