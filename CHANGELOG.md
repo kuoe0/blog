@@ -1,3 +1,9 @@
+v0.3
+----
+
+- Support OpenGraph.
+- Feature photo for all pages (include homepage/post/page).
+
 v0.2
 ----
 
