@@ -190,10 +190,13 @@ header.main-header, footer.main-footer {
 }
 
 header.main-header {
-  color: $base-00;
+  color: white;
   border-top: 5px $base-00 solid;
 
-  h1, h2 { text-align: center; color: inherit;}
+  h1, h2 { 
+    text-align: center;
+    color: inherit;
+  }
   a { 
     color: inherit;
     &:hover, &:active, &:focus {
@@ -459,13 +462,6 @@ body.theme-base-01 {
     color: $base-07;
   }
 
-  header.main-header {
-    color: $base-01;
-    ul li { 
-      color: $base-08;
-    }
-  }
-
   div.page-content {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
@@ -481,6 +477,11 @@ body.theme-base-01 {
 
 header.main-header { 
   padding: 1em 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #272935;
   @include MQ(M) { padding: 2em 0; }
 }
 footer.main-footer {
@@ -488,10 +489,20 @@ footer.main-footer {
   @include MQ(M) { padding: 2em 0; }
 }
 .page-content {
+  background-color: white;
   padding: 1em 0;
   @include MQ(M) { padding: 2em 0; }
 }
-
+#page-wrapper {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#title {
+  border-top:    solid 2px white;
+  border-bottom: solid 2px white;
+}
 
 /* ---------------------------------
 

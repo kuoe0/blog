@@ -1,3 +1,11 @@
 jQuery(document).ready(function($){
-    // todo: jquery stuff should need to put here.
+  function setFeaturePhoto() {
+    if (typeof featurePhoto === 'undefined')
+      return;
+    console.log('Feature photo: ' + JSON.stringify(featurePhoto));
+    $('#page-wrapper').css('background-image', 'url(' + featurePhoto.photo_url + ')');
+    $('header.main-header').css('background', 'rgba(0, 0, 0, 0.5)');
+  }
+
+  setFeaturePhoto();
 });

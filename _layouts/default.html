@@ -14,6 +14,18 @@
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
 
+        {% if page.feature && page.feature.photo %}
+        <script>
+        var featurePhoto = {
+          photo_url:   "{{ page.feature.photo_url }}",
+          creator:     "{{ page.feature.creator }}",
+          creator_url: "{{ page.feature.creator_url }}",
+          license:     "{{ page.feature.license }}",
+          license_url: "{{ page.feature.license_url }}"
+        };
+        </script>
+        {% endif %}
+
         <!-- IE Fixes -->
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,20 +38,22 @@
 
     </head>
     <body class="{{ site.harmono.basetheme }}">
-        {{ content }}
-        <footer class="main-footer">
-            <div class="wc-container">
-                <div class="column one">
-                    {% include footer-links.html %}
+        <div id="page-wrapper">
+            {{ content }}
+            <footer class="main-footer">
+                <div class="wc-container">
+                    <div class="column one">
+                        {% include footer-links.html %}
+                    </div>
+                    <div class="column two">
+                        {% include social.html %}
+                    </div>
                 </div>
-                <div class="column two">
-                    {% include social.html %}
-                </div>
-            </div>
-            <p class="wc-container disclaimer">
-                {% include footer.html %}
-            </p>
-        </footer>
+                <p class="wc-container disclaimer">
+                    {% include footer.html %}
+                </p>
+            </footer>
+        </div>
         <script type="text/javascript">
           /* To avoid render blocking css */
           var cb = function() {
