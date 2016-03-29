@@ -1,27 +1,13 @@
 ---
-layout: page
-title: About me
+layout:    page
+title:     "About"
 permalink: /about/
 ---
 
-Hi, I am Gayan Virajith, a developer (who works on the web) based on Sri Lanka. 
-Graduated from the University College Dublin (National University of Ireland). 
+Hi, I am Chih-Hsuan Kuo (a.k.a. KuoE0 / Tommy Kuo). I'm working for Mozilla for Gecko (the browser engine of Firefox) development. I live in Taiwan (an independent country).
 
-I am Working for [template-factory.nl][tf] also known as [Mearch ICT][m].
-Prefer to serve with Php and Ruby based stacks and also love to work 
-on [Jekyll][jekyll] and [Processwire CMS/CMF][pw].
+[Harmono](https://github.com/kuoe0/harmono) is based on [Harmony](https://github.com/gayanvirajith/harmony), the template created by [Gayan Virajith](https://github.com/gayanvirajith). Thank for his great template. [Harmony](https://github.com/gayanvirajith/harmony) is the most elegant template I found. I love it and add some features for me.
 
 ### Contact me
 
-Find me on [Google+][google] / [Github][github] / [Twitter][Twitter] or just say `Hello` at 
-[gayanvirajith@gmail.com](gayanvirajith@gmail.com).
-
-
-[tf]: http://template-factory.nl
-[m]: http://mearch.com
-[pw]: http://processwire.com
-[pwf]: http://processwire.com/talk
-[jekyll]: http://jekyllrb.com
-[github]: https://github.com/gayanvirajith
-[google]: https://plus.google.com/+GayanVirajith
-[twitter]: https://twitter.com/gayanvirajith
+Find me on [Github](https://github.com/kuoe0).
