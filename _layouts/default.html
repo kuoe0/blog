@@ -3,9 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.title %}{{ page.title }}{% else %}{{ site.harmono.name }}{% endif %}</title>
+        <title>{% if page.title %}{{ page.title | append: " - " | append: site.harmono.name }}{% else %}{{ site.harmono.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.harmono.description }}{% endif %}">
+        <!-- OpenGraph -->
+        <meta property="og:title" content="{% if page.title %}{{ page.title | append: " - " | append: site.harmono.name }}{% else %}{{ site.harmono.name }}{% endif %}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
         {% if page.feature && page.feature.photo %}
         <meta property="og:image" content="{{ page.feature.photo_url }}" />
         {% endif %}
@@ -40,6 +44,7 @@
         <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     </head>
+
     <body class="{{ site.harmono.basetheme }}">
         <div id="page-wrapper">
             {{ content }}
