@@ -6,6 +6,9 @@
         <title>{% if page.title %}{{ page.title }}{% else %}{{ site.harmono.name }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.harmono.description }}{% endif %}">
+        {% if page.feature && page.feature.photo %}
+        <meta property="og:image" content="{{ page.feature.photo_url }}" />
+        {% endif %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
         <!-- Harmony styles -->
