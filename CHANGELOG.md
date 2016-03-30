@@ -1,3 +1,13 @@
+v0.3.1
+------
+
+- Update to align the change of Github Pages.
+  - Change markdown parser to kramdown.
+  - Change source code highlighter to rouge.
+- Update launch script to fit Jekyll 3.0.
+  - [Avoid "Dependency Error: kramdown"](http://blog.csdn.net/simple_the_best/article/details/50639842)
+
+
 v0.3
 ----
 
