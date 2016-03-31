@@ -21,15 +21,21 @@
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
 
+        <!-- Helper functions -->
+        <script src="{{ site.baseurl }}/assets/js/helper.js"></script>
         {% if page.feature && page.feature.photo %}
         <script>
         var featurePhoto = {
-          photo_url:   "{{ page.feature.photo_url }}",
-          creator:     "{{ page.feature.creator }}",
-          creator_url: "{{ page.feature.creator_url }}",
-          license:     "{{ page.feature.license }}",
-          license_url: "{{ page.feature.license_url }}"
+          photoUrl:   "{{ page.feature.photo_url }}",
+          creator:    "{{ page.feature.creator }}",
+          creatorUrl: "{{ page.feature.creator_url }}",
+          license:    "{{ page.feature.license }}",
+          licenseUrl: "{{ page.feature.license_url }}"
         };
+        // Get the real URL of the feature photo.
+        featurePhoto.photoUrl = Helper.getFeaturePhotoUrl("{{ site.url }}",
+                                                          "{{ site.baseurl }}",
+                                                          featurePhoto.photoUrl);
         </script>
         {% endif %}
 
