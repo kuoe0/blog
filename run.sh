@@ -10,7 +10,10 @@ SED="sed"
 if which gsed &> /dev/null; then
   SED="gsed"
 fi
-$SED -i "s/kuoe0.github.io/127.0.0.1:4000/" ./_config.yml
-bundle exec jekyll serve --watch --baseurl ""
+
+curl -s "https://pages.github.com/versions.json" > /dev/null
+if [ "$?" -eq "0" ]; then
+  curl -s "https://pages.github.com/versions.json" > gh-pages-versions.json
+fi
 
 
