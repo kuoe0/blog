@@ -15,5 +15,6 @@ curl -s "https://pages.github.com/versions.json" > /dev/null
 if [ "$?" -eq "0" ]; then
   curl -s "https://pages.github.com/versions.json" > gh-pages-versions.json
 fi
+bundle exec jekyll serve --watch --config _config.yml,_config-dev.yml
 
 
