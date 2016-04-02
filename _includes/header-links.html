@@ -1,15 +1,10 @@
-<ul>
-	<li>
-		<a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a><span>/</span>
-	</li>
-	<li>
-		<a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Archive</a><span>/</span>
-	</li>
-	{% if site.harmono.social.github %}
-	<li>
-		<a title="{{ site.harmono.social.github }} on Github" href="https://github.com/kuoe0/harmono" target="_blank">
-			Download
-		</a><span>/</span>
-	</li>
-	{% endif %}
+<ul id="header-link">
+  {% for p in site.harmono.page_list %}
+  {% if forloop.index != 1 %}
+  <span class="header-seperator">/</span>
+  {% endif %}
+  <li id="header-{{ p | downcase }}">
+    <a href="{{ p | downcase | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ p }}</a>
+  </li>
+  {% endfor %}
 </ul>
