@@ -1,9 +1,16 @@
+## v0.4
+
+- Support pages list in config.yml.
+- Add navigation bar in post layout and page layout.
+- Use 'https' by default.
+- [Issue #14](https://github.com/KuoE0/harmono/issues/14) fixed.
+
 ## v0.3.2
 
 - Support the relative URL for the feature photo.
 - Support to use \_config-dev.sh.
 - Download gh-pages-versions.json to use it when offline.
-- Issue 12 fixed.
+- [Issue #12](https://github.com/KuoE0/harmono/issues/12) fixed.
 
 ## v0.3.1
 
