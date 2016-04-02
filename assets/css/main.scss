@@ -661,11 +661,16 @@ div.post img {
 
   img.thumb-photo {
     height: 200px;
-    width: 200px;
+    width: 100%;
     min-height: 200px;
     min-width: 200px;
     object-fit: cover;
     padding: 0;
+    margin: 0;
+
+    @include MQ(M) {
+      width: 200px;
+    }
   }
 }
 
