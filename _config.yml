@@ -23,6 +23,11 @@ harmono:
     facebook: facebook_name
     gplus:    gplus_name
 
+  page_list:
+    - About
+    - Archive
+    - FAQ
+
   # Toggle disclaimer in footer
   show_disclaimer: true
 
