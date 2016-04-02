@@ -1,6 +1,6 @@
 <h6>Few more links</h6>
-<ul class="menu">
-    <li><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About</a></li>
-    <li><a href="{{ '/archive' | prepend: site.baseurl | prepend: site.url }}">Archive</a></li>
-    <li><a href="{{ '/faq' | prepend: site.baseurl | prepend: site.url }}">Help / FAQ</a></li>
+<ul id="footer-link" class="menu">
+  {% for p in site.harmono.page_list %}
+  <li id="footer-{{ p | downcase }}"><a href="{{ p | downcase | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ p }}</a></li>
+  {% endfor %}
 </ul>
