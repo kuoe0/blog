@@ -195,9 +195,11 @@ header.main-header {
   h1, h2 { 
     text-align: center;
     color: inherit;
+    a {
+      color: white;
+    }
   }
   a { 
-    color: inherit;
     &:hover, &:active, &:focus {
       border-bottom-color: transparent;
     }
@@ -497,6 +499,14 @@ footer.main-footer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.feature-photo-credit {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-weight: bold;
+  padding: 5px 10px;
 }
 #title {
   border-top:    solid 2px white;
