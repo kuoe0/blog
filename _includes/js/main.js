@@ -2,7 +2,7 @@
 
 jQuery(document).ready(function($){
 
-  $(window).scroll(function () {
+  $(window).scroll(() => {
     var scroll = $(window).scrollTop();
     var headerTop = $('.main-header')[0].offsetTop;
     var headerHeight = $('.main-header')[0].clientHeight;
@@ -12,6 +12,24 @@ jQuery(document).ready(function($){
     } else {
       $(navbar).removeClass('dark');
     }
+  });
+
+  function resetNavbar () {
+    var dropdownNav = $('.dropdown')[0];
+    $(dropdownNav).hide();
+    $('nav').each((i, nav) => { $(nav).removeClass('dark'); });
+  }
+  $(window).resize(resetNavbar);
+  $('#nav-menu').click(() => {
+    var menu = $('.dropdown')[0];
+    var isVisible = $(menu).is(':visible');
+    var animateOption = { duration: 300 };
+    if (isVisible) {
+      animateOption.done = resetNavbar;
+    } else {
+      $('nav').each((i, nav) => { $(nav).addClass('dark'); });
+    }
+    $(menu).animate({ height: "toggle", }, animateOption);
   });
 
   function setFeaturePhoto() {
