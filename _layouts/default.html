@@ -11,7 +11,6 @@
         <meta property="og:type" content="article" />
         <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
         {% if page.feature && page.feature.photo %}
-        <meta property="og:image" content="{{ page.feature.photo_url }}" />
         {% endif %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
@@ -21,22 +20,22 @@
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
 
-        <!-- Helper functions -->
-        <script src="{{ site.baseurl }}/assets/js/helper.js"></script>
         {% if page.feature && page.feature.photo %}
+        {% assign protocol_of_photo_url = page.feature.photo_url | split: ':' | first %}
+        {% if protocol_of_photo_url != 'http' and protocol_of_photo_url != 'https' %}
+        {% assign real_photo_url = page.feature.photo_url | prepend: '/' | prepend: site.baseurl | prepend: site.url %}
+        {% endif %}
         <script>
         var featurePhoto = {
-          photoUrl:   "{{ page.feature.photo_url }}",
+          photoUrl:   "{%if real_photo_url %}{{ real_photo_url }}{% else %}{{ page.feature.photo_url }}{% endif %}",
           creator:    "{{ page.feature.creator }}",
           creatorUrl: "{{ page.feature.creator_url }}",
           license:    "{{ page.feature.license }}",
           licenseUrl: "{{ page.feature.license_url }}"
         };
-        // Get the real URL of the feature photo.
-        featurePhoto.photoUrl = Helper.getFeaturePhotoUrl("{{ site.url }}",
-                                                          "{{ site.baseurl }}",
-                                                          featurePhoto.photoUrl);
         </script>
+        <!-- OpenGraph for image -->
+        <meta property="og:image" content="{% if real_photo_url %}{{ real_photo_url }}{% else %}{{ page.feature.photo_url }}{% endif %}" />
         {% endif %}
 
         <!-- IE Fixes -->
