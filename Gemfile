@@ -17,4 +17,5 @@ end
 versions = JSON.parse(versions.read)
 
 gem 'github-pages', versions['github-pages']
+gem 'jekyll-feed'
 gem 'rake'
