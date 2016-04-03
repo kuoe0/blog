@@ -1,3 +1,8 @@
+## v0.5
+
+- Support RSS/Atom feed.
+- [Issue #17](https://github.com/KuoE0/harmono/issues/17) fixed.
+
 ## v0.4.1
 
 - Support to add photo credit of feature photos.
