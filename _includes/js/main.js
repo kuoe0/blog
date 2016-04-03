@@ -1,6 +1,19 @@
 'use strict'
 
 jQuery(document).ready(function($){
+
+  $(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    var headerTop = $('.main-header')[0].offsetTop;
+    var headerHeight = $('.main-header')[0].clientHeight;
+    var navbar = $('nav')[0];
+    if (scroll > headerTop + headerHeight) {
+      $(navbar).addClass('dark');
+    } else {
+      $(navbar).removeClass('dark');
+    }
+  });
+
   function setFeaturePhoto() {
     if (typeof featurePhoto === 'undefined')
       return;
