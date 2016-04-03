@@ -825,14 +825,11 @@ nav {
         font-size: 1.5em;
         color: white;
       }
-
       &#nav-home {
         float: left;
       }
-
-      &:hover, &:focus {
-        transition: background-color 0.3s ease-out;
-        background-color: #da4939;
+      &#nav-menu:hover a {
+        border-bottom: none;
       }
     }
     &.banner {
@@ -854,6 +851,10 @@ nav {
         float: right;
         &#nav-menu {
           display: none;
+        }
+        &:hover, &:focus {
+          transition: background-color 0.3s ease-out;
+          background-color: #da4939;
         }
       }
       &.banner {
