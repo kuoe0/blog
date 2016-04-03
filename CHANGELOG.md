@@ -1,3 +1,8 @@
+## v0.4.1
+
+- Add photo credit of feature photo.
+- Support responsive navigation bar between desktop UI and mobile UI.
+
 ## v0.4
 
 - Support pages list in config.yml.
