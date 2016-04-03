@@ -1,6 +1,6 @@
 <nav>
-  <ul id="nav-link" class="wc-container">
-    <li id="nav-home"><a href="{{ site.baseurl | prepend: site.url }}"><i class="fa fa-home"></i></a></li>
+  <ul id="nav-link">
+    <li id="nav-home"><a href="{{ site.baseurl | prepend: site.url }}">{{ site.harmono.name }}</a></li>
     {% for p in site.harmono.page_list reversed %}
     <li id="nav-{{ p | downcase }}"><a href="{{ p | downcase | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ p }}</a></li>
     {% endfor %}

@@ -803,15 +803,18 @@ tbody tr:nth-child(odd) th {
 
 --------------------------------- */
 nav {
-  background-color: #272935;
   position: fixed;
   top: 0;
   line-height: 1.5em;
   width: 100%;
+  z-index: 99;
+  &.dark {
+    transition: background-color 0.5s ease-out;
+    background-color: #272935;
+  }
 
-  ul {
+  ul#nav-link {
     list-style: none;
-    margin: 0;
     padding: 0;
     overflow: auto;
     li {
@@ -819,15 +822,15 @@ nav {
       a {
         display: block;
         padding: 5px 10px;
+        font-size: 1.5em;
+        color: white;
       }
       &#nav-home {
         float: left;
       }
       &:hover {
+        transition: background-color 0.3s ease-out;
         background-color: #da4939;
-        a {
-          color: white;
-        }
       }
     }
   }
