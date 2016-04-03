@@ -12,8 +12,6 @@ feature:
     license_url: "http://creativecommons.org/publicdomain/zero/1.0/"
 ---
 
-## Feature Photo in Front Matter
-
 If you want to specify a photo as the feature photo for a post. Just put the following information in Front Matter.
 
 ```
