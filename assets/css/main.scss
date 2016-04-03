@@ -813,27 +813,58 @@ nav {
     background-color: #272935;
   }
 
-  ul#nav-link {
+  ul.nav-link {
     list-style: none;
     padding: 0;
     overflow: auto;
     li {
       float: right;
       a {
-        display: block;
         padding: 5px 10px;
+        display: block;
         font-size: 1.5em;
         color: white;
       }
+
       &#nav-home {
         float: left;
       }
-      &:hover {
+
+      &:hover, &:focus {
         transition: background-color 0.3s ease-out;
         background-color: #da4939;
       }
     }
+    &.banner {
+      display: none;
+    }
+    &.dropdown {
+      display: none;
+      box-shadow: 0px 5px 10px #555;
+      li {
+        float: none;
+      }
+    }
+
+    @include MQ(M) {
+      background-color: transparent;
+      display: inline;
+
+      li {
+        float: right;
+        &#nav-menu {
+          display: none;
+        }
+      }
+      &.banner {
+        display: inline;
+      }
+      &.dropdown {
+        display: none;
+      }
+    }
   }
+
 }
 
 /* --------------------------------

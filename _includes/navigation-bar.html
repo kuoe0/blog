@@ -1,7 +1,15 @@
-<nav>
-  <ul id="nav-link">
+<nav id="navbar">
+  <ul class="nav-link">
     <li id="nav-home"><a href="{{ site.baseurl | prepend: site.url }}">{{ site.harmono.name }}</a></li>
+    <li id="nav-menu"><a href="#"><i class="fa fa-bars"></i></a></li>
+  </ul>
+  <ul class="nav-link banner">
     {% for p in site.harmono.page_list reversed %}
+    <li id="nav-{{ p | downcase }}"><a href="{{ p | downcase | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ p }}</a></li>
+    {% endfor %}
+  </ul>
+  <ul class="nav-link dropdown">
+    {% for p in site.harmono.page_list %}
     <li id="nav-{{ p | downcase }}"><a href="{{ p | downcase | prepend: '/' | prepend: site.baseurl | prepend: site.url }}">{{ p }}</a></li>
     {% endfor %}
   </ul>
