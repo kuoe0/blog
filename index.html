@@ -9,47 +9,41 @@ layout: default
   </div>
 </header>
 <div id="home" class="page-content wc-container">
-	<div class="posts">
-  		{% for post in site.posts limit:10 %}
-  			<div class="post">
-    			<h3 class="post-title">
-			      <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
-			        {{ post.title }}
-			      </a>
-    			</h3>
+  <div class="posts">
 
-          <p class="post-meta">
-            {% if post.categories.size > 0 %}
-            <span class="categories">
-            {{ post.categories | array_to_sentence_string }}
-            </span> |
-            {% endif %}
-            <span class="post-date">
-            {{ post.date | date: "%b %-d, %Y" }}
-            </span>
-          </p>
+    {% for post in site.posts limit:10 %}
+    <div class="post">
+      <h3 class="post-title">
+        <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+          {{ post.title }}
+        </a>
+      </h3>
 
+      <p class="post-meta">
+      {% if post.categories.size > 0 %}
+      <span class="categories">
+        {{ post.categories | array_to_sentence_string }}
+      </span> |
+      {% endif %}
+      <span class="post-date">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </span>
+      </p>
 
-          {% if post.feature && post.feature.photo %}
-          <div class="post-preview">
-            <div class="thumb-photo-block">
-              <img class="thumb-photo" src="{{ post.feature.photo_url }}" />
-            </div>
-            <div class="post-content-block">
-              <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-              <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title }}"> Read More </a>
-            </div>
-          </div>
-          {% else %}
-          <div class="post-preview">
-            <div class="post-content-block">
-              <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
-              <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title }}"> Read More </a>
-            </div>
-          </div>
-          {% endif %}
+      <div class="post-preview">
+        {% if post.feature && post.feature.photo %}
+        <div class="thumb-photo-block">
+          <img class="thumb-photo" src="{{ post.feature.photo_url }}" />
+        </div>
+        {% endif %}
+        <div class="post-content-block">
+          <p class="post-excerpt">{{ post.excerpt | strip_html }}</p>
+          <a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" title="{{ post.title }}"> Read More </a>
+        </div>
+      </div>
 
-  			</div>
-  		{% endfor %}
-	</div>
+    </div>
+    {% endfor %}
+
+  </div>
 </div>
