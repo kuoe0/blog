@@ -40,15 +40,15 @@ body {
 }
 
 .wc-container {
-    width: 90%;
-    max-width: $M; // see breakpoints in _sass/partials/_layout.scss
-    margin: 0 auto;
+  width: 90%;
+  max-width: $M; // see breakpoints in _sass/partials/_layout.scss
+  margin: 0 auto;
 
-    &::after { /* Clearfix */
-        content: '';
-        display: table;
-        clear: both;
-    }
+  &::after { /* Clearfix */
+      content: '';
+      display: table;
+      clear: both;
+  }
 }
 
 .wc-img-replace { /* replace text with a background-image */
@@ -623,7 +623,7 @@ div.posts {
   }
 }
 
-div.post {
+div.post-content {
   padding-top: .5em;
   padding-bottom: 1em;
   border-bottom: 1px $base-05 solid;
@@ -653,7 +653,7 @@ p.post-meta {
   margin: 0;
 }
 
-div.post img {
+div.post-content img {
   margin-left: auto;
   margin-right: auto;
 }
