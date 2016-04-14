@@ -51,7 +51,8 @@ kramdown:
       line_numbers: true
       start_line: 1
 
-highlighter: rouge
+# source code highlight
+highlighter: rouge # must be rouge if using Jekyll 3.0+
 
 # Permalinks
 permalink: "/posts/:year/:month/:day/:title/"
