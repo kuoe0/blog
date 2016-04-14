@@ -14,8 +14,7 @@
 @import "partials/layout";
 
 // Import syntax 
-@import "partials/syntax";
-
+@import "{% if site.highlight_theme %}{{ site.highlight_theme | prepend: 'syntax-theme/' | append: '.css' }}{% else %}{{ 'syntax-theme/default.css' }}{% endif %}";
 
 /* -------------------------------- 
 
@@ -133,7 +132,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 hr {
   margin-top: 20px;
@@ -466,7 +464,6 @@ body.theme-base-01 {
   div.page-content {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
-
 
 }
 
