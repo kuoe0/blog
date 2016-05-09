@@ -548,19 +548,22 @@ code {
   color: $base-08;
   background-color: rgba($base-08, .1);
 }
+
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1em;
   padding: 1em;
   @include font-size(12px);
-  line-height: 1.4;
+  line-height: 28px;
   white-space: pre;
-  white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
   background-color: $color-white;
-  border: 1px solid $base-05;
+  border: none;
+  overflow-x: auto;
+
+  font-family: "Inconsolata", "Consolas", "Courier New", monospace;
   code {
     padding: 0;
     font-size: 100%;
@@ -570,14 +573,6 @@ pre {
 
   @include MQ(M) {
     @include font-size(14px);
-  }
-}
-
-.highlight {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  pre {
-    margin-bottom: 0;
   }
 }
 
@@ -873,6 +868,51 @@ nav {
 
 /* --------------------------------
 
+  Syntax Highlight Block
+
+--------------------------------- */
+// Reference:
+// https://github.com/ensemblejs/website/blob/cabb4ec475cafc225bf287eaec0671405a94120b/source/assets/stylesheets/_github.css.scss
+
+.highlight {
+  margin-bottom: 25px;
+
+  pre {
+    margin: 0;
+  }
+
+  pre.lineno {
+    padding: 12px;
+    background-color: transparent;
+  }
+
+  .code {
+    width: calc(100% - 50px);
+    overflow-y: scroll;
+
+    pre {
+      padding: 12px;
+    }
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  td {
+    padding: 0;
+    border: solid 1px #ddd;
+  }
+
+  .gutter {
+    width: 50px;
+    text-align: right;
+  }
+}
+
+/* --------------------------------
+
   Disqus
 
 --------------------------------- */
@@ -887,4 +927,3 @@ nav {
     padding-bottom: 2em;
   }
 }
-
