@@ -2,34 +2,30 @@
 
 # Site URL
 # url: https://kuoe0.github.io
-url: "https://kuoe0.github.io"
-enforce_ssl: "kuoe0.github.io"
+url: "https://blog.kuoe0.tw"
+enforce_ssl: "blog.kuoe0.tw"
 # Base URL (https://kuoe0.github.io{/baseurl})
-baseurl: "/harmono"
+baseurl: ""
 
 # Site Title
-title: Harmono
+title: KuoE0's Dots
 # Little description about your site
-description: Harmono is free responsive jekyll theme based on harmony.
+description: Connect the dots in the future.
 
 # Harmono theme configuration. Please change accordingly.
 harmono:
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   # Google Analytics key, leave blank to ignore
-  google_analytics_key: UA-xxxx-x
+  google_analytics_key: UA-26646299-1
   # Profile links, leave blank to ignore
   social:
-    email:    your@email.address
-    linkedin: linkedin_name
-    github:   github_name
-    twitter:  twitter_name
-    facebook: facebook_name
-    gplus:    gplus_name
+    email:    kuoe0.tw@gmail.com
+    linkedin: kuoe0
+    github:   kuoe0
 
   page_list:
     - About
     - Archive
-    - FAQ
 
   # Toggle disclaimer in footer
   show_disclaimer: true
@@ -38,7 +34,7 @@ harmono:
   comment: true
   # Comment system provider
   disqus:
-    short_name: harmono
+    short_name: kuoe0sdots
 
 # Conversion / Build settings
 markdown: kramdown
@@ -73,6 +69,9 @@ exclude:
 sass:
   sass_dir: assets/css/_sass
   style: :compressed
+
+feed:
+  path: atom.xml
 
 plugins:
   - jekyll-feed
