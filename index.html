@@ -1,13 +1,9 @@
 ---
-layout: default
+layout:   default
+homepage: true
 ---
-<header class="main-header">
-  <div class="wc-container">
-    <h1><a href="{{ site.baseurl }}/">{{ site.harmono.name }}</a></h1>
-    <h2>{{ site.harmono.description }}</h2>
-    {% include header-links.html %}
-  </div>
-</header>
+{% include header.html %}
+
 <div id="home" class="page-content wc-container">
   <div class="posts">
 
@@ -31,7 +27,7 @@ layout: default
       </p>
 
       <div class="post-preview">
-        {% if post.feature && post.feature.photo %}
+        {% if post.feature and post.feature.photo %}
         <div class="thumb-photo-block">
           <img class="thumb-photo" src="{{ post.feature.photo_url }}" />
         </div>

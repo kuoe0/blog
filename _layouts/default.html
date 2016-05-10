@@ -20,7 +20,7 @@
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
 
-        {% if page.feature && page.feature.photo %}
+        {% if page.feature and page.feature.photo %}
         {% assign protocol_of_photo_url = page.feature.photo_url | split: ':' | first %}
         {% if protocol_of_photo_url != 'http' and protocol_of_photo_url != 'https' %}
         {% assign real_photo_url = page.feature.photo_url | prepend: '/' | prepend: site.baseurl | prepend: site.url %}

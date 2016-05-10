@@ -41,8 +41,18 @@ harmono:
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter_opts:
+    # Rouge Options › https://github.com/jneen/rouge#full-options
+    css_class: 'highlight'
+    #line_numbers: true # bad idea, spans don't need linenos and would inherit this option
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
 
-highlighter: rouge
+# source code highlight
+highlighter: rouge # must be rouge if using Jekyll 3.0+
 
 # Permalinks
 permalink: "/posts/:year/:month/:day/:title/"

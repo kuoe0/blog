@@ -14,8 +14,7 @@
 @import "partials/layout";
 
 // Import syntax 
-@import "partials/syntax";
-
+@import "{% if site.highlight_theme %}{{ site.highlight_theme | prepend: 'syntax-theme/' | append: '.css' }}{% else %}{{ 'syntax-theme/default.css' }}{% endif %}";
 
 /* -------------------------------- 
 
@@ -40,15 +39,15 @@ body {
 }
 
 .wc-container {
-    width: 90%;
-    max-width: $M; // see breakpoints in _sass/partials/_layout.scss
-    margin: 0 auto;
+  width: 90%;
+  max-width: $M; // see breakpoints in _sass/partials/_layout.scss
+  margin: 0 auto;
 
-    &::after { /* Clearfix */
-        content: '';
-        display: table;
-        clear: both;
-    }
+  &::after { /* Clearfix */
+      content: '';
+      display: table;
+      clear: both;
+  }
 }
 
 .wc-img-replace { /* replace text with a background-image */
@@ -133,7 +132,6 @@ img {
   max-width: 100%;
   height: auto;
 }
-
 
 hr {
   margin-top: 20px;
@@ -467,7 +465,6 @@ body.theme-base-01 {
     h1, h2, h3, h4, h5, h6 { color: $base-01; }
   }
 
-
 }
 
 /* --------------------------------
@@ -551,19 +548,22 @@ code {
   color: $base-08;
   background-color: rgba($base-08, .1);
 }
+
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: 1em;
   padding: 1em;
   @include font-size(12px);
-  line-height: 1.4;
+  line-height: 28px;
   white-space: pre;
-  white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
   background-color: $color-white;
-  border: 1px solid $base-05;
+  border: none;
+  overflow-x: auto;
+
+  font-family: "Inconsolata", "Consolas", "Courier New", monospace;
   code {
     padding: 0;
     font-size: 100%;
@@ -573,14 +573,6 @@ pre {
 
   @include MQ(M) {
     @include font-size(14px);
-  }
-}
-
-.highlight {
-  margin-bottom: 1em;
-  margin-top: 1em;
-  pre {
-    margin-bottom: 0;
   }
 }
 
@@ -623,7 +615,7 @@ div.posts {
   }
 }
 
-div.post {
+div.post-content {
   padding-top: .5em;
   padding-bottom: 1em;
   border-bottom: 1px $base-05 solid;
@@ -653,7 +645,7 @@ p.post-meta {
   margin: 0;
 }
 
-div.post img {
+div.post-content img {
   margin-left: auto;
   margin-right: auto;
 }
@@ -876,6 +868,51 @@ nav {
 
 /* --------------------------------
 
+  Syntax Highlight Block
+
+--------------------------------- */
+// Reference:
+// https://github.com/ensemblejs/website/blob/cabb4ec475cafc225bf287eaec0671405a94120b/source/assets/stylesheets/_github.css.scss
+
+.highlight {
+  margin-bottom: 25px;
+
+  pre {
+    margin: 0;
+  }
+
+  pre.lineno {
+    padding: 12px;
+    background-color: transparent;
+  }
+
+  .code {
+    width: calc(100% - 50px);
+    overflow-y: scroll;
+
+    pre {
+      padding: 12px;
+    }
+  }
+
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  td {
+    padding: 0;
+    border: solid 1px #ddd;
+  }
+
+  .gutter {
+    width: 50px;
+    text-align: right;
+  }
+}
+
+/* --------------------------------
+
   Disqus
 
 --------------------------------- */
@@ -890,4 +927,3 @@ nav {
     padding-bottom: 2em;
   }
 }
-

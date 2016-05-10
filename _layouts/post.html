@@ -2,21 +2,7 @@
 layout: default
 ---
 {% include navigation-bar.html %}
-<header class="main-header">
-  <div class="wc-container">
-    <h1 id="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
-    {% if page.feature && page.feature.photo && page.feature.creator %}
-    <div class="feature-photo-credit">
-      <p>Photo credit:
-        <a href="{{ page.feature.creator_url }}">{{ page.feature.creator }}</a>
-        {% if page.feature.license %}
-        , by <a href="{{ page.feature.license_url }}">{{ page.feature.license }}</a>
-        {% endif %}
-      </p>
-    </div>
-    {% endif %}
-  </div>
-</header>
+{% include header.html %}
 
 <div class="page-content">
   <div class="wc-container">
@@ -31,11 +17,10 @@ layout: default
         {{ page.date | date: "%b %-d, %Y" }}
         </span>
       </p>
-      <div class="post">
+      <div class="post-content">
         {{ content }}
       </div>
     </div>
-
 
     {% if site.related_posts %}
     <div class="related">

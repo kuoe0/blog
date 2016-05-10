@@ -1,3 +1,7 @@
+## v0.6
+- Add line number for code block.
+- Support multiple syntax highlight themes.
+
 ## v0.5
 
 - Support RSS/Atom feed.
@@ -30,7 +34,6 @@
 - Update launch script to fit Jekyll 3.0.
   - [Avoid "Dependency Error: kramdown"](http://blog.csdn.net/simple_the_best/article/details/50639842)
 
-
 ## v0.3
 
 - Support OpenGraph.
@@ -45,4 +48,3 @@
 
 - Change some settings from Harmony.
 - Add Disqus comment system.
-
