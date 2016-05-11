@@ -1,4 +1,5 @@
 ## v0.6.1
+- Add separator for posts.
 - [Issue #22](https://github.com/KuoE0/harmono/issues/22) fixed.
 
 ## v0.6
