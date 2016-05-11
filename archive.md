@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Blog archive
+layout:    page
+title:     "Blog Archive"
 permalink: /archive/
 ---
 <div class="page-content wc-container">
@@ -15,4 +15,3 @@ permalink: /archive/
     <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
 {% endfor %}
 </div>
-

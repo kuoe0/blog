@@ -238,6 +238,10 @@ header.main-header {
 footer.main-footer {
   background-color: $base-00;
   color: $base-07;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+
   .column {
     float:left;
     @include column(1);
@@ -255,6 +259,7 @@ footer.main-footer {
       padding: 10px 0;
       text-transform: uppercase;
   }
+
   h6::before {
       content: '';
       position: absolute;
@@ -622,18 +627,48 @@ div.posts {
   }
 }
 
-p.post-meta {
+.post-date {
   line-height: 1.6;
   letter-spacing: 2px;
   @include font-size(12px);
   overflow: hidden;
-  display: block;
+  margin-bottom: 1em;
   padding: 0;
   color: #7A7A7A;
   @include MQ(M) {
     @include font-size(16px);
   }
 }
+
+.post-tags {
+  border-top: 1px solid $base-05;
+  margin: 0;
+  padding: 5px 0;
+
+  line-height: 1.6;
+  letter-spacing: 2px;
+  @include font-size(12px);
+  overflow: hidden;
+  color: #7A7A7A;
+  @include MQ(M) {
+    @include font-size(16px);
+  }
+
+  ul.tags-list {
+    margin: 0;
+    padding: 0;
+
+    li.tag {
+      background: rgba(#7A7A7A, .1);
+      display: inline-block;
+      margin-left: 0;
+      float: left;
+      margin-right: 5px;
+      padding: 0 5px;
+    }
+  }
+}
+
 .page-content p.post-meta {
   margin: 0;
 }

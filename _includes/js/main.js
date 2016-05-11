@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
   // Only used for homepage.
   function updateAllThumbPhoto() {
     $('.thumb-photo').each((idx, elem) => {
-      let location = window.location;
+      var location = window.location;
       var oldUrl = $(elem).attr('src');
       var newUrl = Helper.getFeaturePhotoUrl(location.protocol + '//' + location.host,
                                              location.pathname,

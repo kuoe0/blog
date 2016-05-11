@@ -1,15 +1,10 @@
 ---
-layout:  post
-title:   "Syntax Highlight for Source Code"
-date:    2016-04-15
-tags:    ["syntax highlight"]
+layout: post
+title:  "Syntax Highlight for Source Code"
+date:   2016-04-15
+tags:   ["syntax highlight"]
 feature:
-    photo:       false
-    photo_url:   
-    creator:     
-    creator_url: 
-    license:     
-    license_url: 
+    photo: false
 ---
 
 Use the following format for your source code:
@@ -21,7 +16,6 @@ Use the following format for your source code:
     ```
 
 You can specify which language it is after the triple <code>`</code> symbols.
-
 
 ## C++ Example
 

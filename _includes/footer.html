@@ -1,4 +1,16 @@
-{% if site.harmono.show_disclaimer %}
-  Made by <a href="https://kuoe0.tw" target="_blank">KuoE0</a> based on <a href="https://github.com/gayanvirajith/harmony">Harmony</a>.
-{% endif %}
-Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+<footer class="main-footer">
+  <div class="wc-container">
+    <div class="column one">
+      {% include footer-links.html %}
+    </div>
+    <div class="column two">
+      {% include social.html %}
+    </div>
+  </div>
+  <p class="wc-container disclaimer">
+    {% if site.harmono.show_disclaimer %}
+    <a href="https://kuoe0.github.com/harmono/">Harmono</a> made by <a href="https://kuoe0.tw" target="_blank">KuoE0</a> inspired by <a href="https://github.com/gayanvirajith/harmony">Harmony</a>.
+    {% endif %}
+    Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>.
+  </p>
+</footer>
