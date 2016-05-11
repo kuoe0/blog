@@ -238,6 +238,10 @@ header.main-header {
 footer.main-footer {
   background-color: $base-00;
   color: $base-07;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+
   .column {
     float:left;
     @include column(1);
@@ -255,6 +259,7 @@ footer.main-footer {
       padding: 10px 0;
       text-transform: uppercase;
   }
+
   h6::before {
       content: '';
       position: absolute;
