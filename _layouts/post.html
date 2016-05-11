@@ -7,20 +7,25 @@ layout: default
 <div class="page-content">
   <div class="wc-container">
     <div class="post">
-      <p class="post-meta">
-        {% if (page.categories.size > 0 %}
-        <span class="categories">
-        {{ page.categories | array_to_sentence_string }}
-        </span> |
-        {% endif %}
-        <span class="post-date">
+      <div class="post-date">
+        <span>
         {{ page.date | date: "%b %-d, %Y" }}
         </span>
-      </p>
+      </div>
       <div class="post-content">
         {{ content }}
       </div>
     </div>
+
+    {% if page.tags.size > 0 %}
+    <div class="post-tags">
+      <ul class="tags-list">
+        {% for tag in page.tags %}
+        <li class="tag">{{ tag | prepend: '#' }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
 
     {% if site.related_posts %}
     <div class="related">
