@@ -1,3 +1,11 @@
+## v0.7
+- Add tags list.
+- Design 404 page.
+- Bugs fixed:
+  - footer not at the end of page
+  - photo credit shows when no feature photo
+  - remove `let` (ES6)
+
 ## v0.6.1
 - Add separator for posts.
 - [Issue #22](https://github.com/KuoE0/harmono/issues/22) fixed.
