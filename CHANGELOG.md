@@ -1,3 +1,6 @@
+## v0.6.1
+- [Issue #22](https://github.com/KuoE0/harmono/issues/22) fixed.
+
 ## v0.6
 - Add line number for code block.
 - Support multiple syntax highlight themes.
