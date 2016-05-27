@@ -75,4 +75,5 @@ sass:
 
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
   - jekyll-sitemap
