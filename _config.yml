@@ -3,6 +3,7 @@
 # Site URL
 # url: https://kuoe0.github.io
 url: "https://kuoe0.github.io"
+enforce_ssl: "kuoe0.github.io"
 # Base URL (https://kuoe0.github.io{/baseurl})
 baseurl: "/harmono"
 
