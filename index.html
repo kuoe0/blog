@@ -27,9 +27,9 @@ homepage: true
       </p>
 
       <div class="post-preview">
-        {% if post.feature and post.feature.photo %}
+        {% if post.image %}
         <div class="thumb-photo-block">
-          <img class="thumb-photo" src="{{ post.feature.photo_url }}" />
+          <img class="thumb-photo" src="{{ post.image }}" />
         </div>
         {% endif %}
         <div class="post-content-block">

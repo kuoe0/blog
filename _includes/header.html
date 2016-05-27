@@ -10,12 +10,12 @@
     {% else %}
     <h1 id="title"><a href="{{ page.url }}">{{ page.title }}</a></h1>
     {% endif %}
-    {% if page.feature and page.feature.photo and page.feature.creator %}
+    {% if page.image_info and page.image_info.creator %}
     <div class="feature-photo-credit">
       <p>Photo credit:
-        <a href="{{ page.feature.creator_url }}">{{ page.feature.creator }}</a>
-        {% if page.feature.license %}
-        / by <a href="{{ page.feature.license_url }}">{{ page.feature.license }}</a>
+        <a href="{{ page.image_info.creator_url }}">{{ page.image_info.creator }}</a>
+        {% if page.image_info.license %}
+        / by <a href="{{ page.image_info.license_url }}">{{ page.image_info.license }}</a>
         {% endif %}
       </p>
     </div>
