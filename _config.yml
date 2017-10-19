@@ -74,7 +74,7 @@ sass:
   sass_dir: assets/css/_sass
   style: :compressed
 
-gems:
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
