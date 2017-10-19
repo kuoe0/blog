@@ -285,6 +285,9 @@ footer.main-footer {
 
   p.disclaimer {
     text-align: center;
+    @include MQ(S) {
+      text-align: left;
+    }
   }
 
   ul.social-media {
