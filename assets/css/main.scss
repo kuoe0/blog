@@ -361,21 +361,17 @@ div.page-content {
 div.page-content {
   ul {
     padding: 0 0 1em 0;
+    list-style-type: square;
+    list-style-position: inside;
     li {
       @include font-size(14px);
       color: $color-2;
       line-height: 1.6;
-      background: url(./images/bullet.svg);
-      background-repeat: no-repeat;
-      background-position: 0 6px;
-      padding: 0 0 5px 15px;
-      margin-left: 0;
     }
     @include MQ(M){
       li {
         @include font-size(16px);
         line-height: 1.5;
-        background-position: 0 7px;
       }
     }
   }
@@ -384,12 +380,12 @@ div.page-content {
     // padding-top: 1em;
     padding-bottom: 1em;
     list-style: decimal;
+    list-style-position: inside;
     margin-left: 0;
     li {
       color: $color-2;
       line-height: 1.6;
       padding: 0 0 5px 0px;
-      margin-left: 2em;
       position:relative;
     }
     @include MQ(M){
