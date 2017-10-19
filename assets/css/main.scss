@@ -518,8 +518,11 @@ footer.main-footer {
 blockquote {
   padding: .5em 1em;
   margin: .8em 0;
-  color: #7a7a7a;
-  border-left: .25em solid #e5e5e5;
+  color: #da4939;
+  border-left: .25em solid rgba(218,73,57,0.1);
+}
+blockquote ul li {
+  color: #da4939 !important;
 }
 blockquote p:last-child {
   margin-bottom: 0;
