@@ -44,7 +44,7 @@
 
   <li>
     <a title="Subscribe"
-       href="{{ site.baseurl | prepend: site.url }}/feed.xml"
+       href="{{ site.baseurl | prepend: site.url }}/{% if site.feed.path %}{{ site.feed.path }}{% else %}{{ "feed.xml" }}{% endif %}"
        class="wc-img-replace" target="_blank"><i class="fa fa-fw fa-rss"></i></a>
   </li>
 

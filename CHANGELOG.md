@@ -1,3 +1,9 @@
+## v0.7.1
+- Bugs fixed:
+  - `background-size: cover` on mobile
+  - `<h2>` and `<h3>` are too similar
+  - miss `background-color` of navbar after closed it
+
 ## v0.7
 - Add tags list.
 - Design 404 page.

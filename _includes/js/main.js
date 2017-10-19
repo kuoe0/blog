@@ -2,11 +2,9 @@
 
 jQuery(document).ready(function($){
 
-  $(window).scroll(() => {
-    // Close dropdown navigation bar when scrolling.
-    var dropdownNav = $('.dropdown')[0];
-    $(dropdownNav).hide();
-
+  function switchNavbarBackground() {
+    // Remove bg-color of navbar when it is on the feature photo. Otherwise, add
+    // bg-color to navbar.
     var scroll = $(window).scrollTop();
     var headerTop = $('.main-header')[0].offsetTop;
     var headerHeight = $('.main-header')[0].clientHeight;
@@ -16,13 +14,19 @@ jQuery(document).ready(function($){
     } else {
       $(navbar).removeClass('dark');
     }
-  });
+  }
 
   function resetNavbar () {
     var dropdownNav = $('.dropdown')[0];
     $(dropdownNav).hide();
-    $('nav').each((i, nav) => { $(nav).removeClass('dark'); });
+    switchNavbarBackground();
   }
+
+  $(window).scroll(() => {
+    // Close dropdown navigation bar when scrolling if it is opened.
+    resetNavbar();
+  });
+
   $(window).resize(resetNavbar);
   $('#nav-menu').click((evt) => {
     evt.preventDefault();
@@ -45,20 +49,5 @@ jQuery(document).ready(function($){
     $('header.main-header').css('background', 'rgba(0, 0, 0, 0.5)');
   }
 
-  // Only used for homepage.
-  function updateAllThumbPhoto() {
-    $('.thumb-photo').each((idx, elem) => {
-      var location = window.location;
-      var oldUrl = $(elem).attr('src');
-      var newUrl = Helper.getFeaturePhotoUrl(location.protocol + '//' + location.host,
-                                             location.pathname,
-                                             oldUrl);
-      if (oldUrl != newUrl) {
-        $(elem).attr('src', newUrl);
-      }
-    });
-  }
-
   setFeaturePhoto();
-  updateAllThumbPhoto();
 });

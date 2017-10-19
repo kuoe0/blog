@@ -3,14 +3,17 @@
 # Site URL
 # url: https://kuoe0.github.io
 url: "https://kuoe0.github.io"
+enforce_ssl: "kuoe0.github.io"
 # Base URL (https://kuoe0.github.io{/baseurl})
 baseurl: "/harmono"
 
+# Site Title
+title: Harmono
+# Little description about your site
+description: Harmono is free responsive jekyll theme based on harmony.
+
 # Harmono theme configuration. Please change accordingly.
 harmono:
-  name: Harmono
-  # Little description about your site
-  description: Harmono is free responsive jekyll theme based on harmony.
   basetheme: theme-base-01 # pre defined thmes are darken, blue-water, redish.
   # Google Analytics key, leave blank to ignore
   google_analytics_key: UA-xxxx-x
@@ -71,5 +74,7 @@ sass:
   sass_dir: assets/css/_sass
   style: :compressed
 
-gems:
+plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap

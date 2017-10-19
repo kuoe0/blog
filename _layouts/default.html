@@ -3,16 +3,17 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>{% if page.title %}{{ page.title | append: " - " | append: site.harmono.name }}{% else %}{{ site.harmono.name }}{% endif %}</title>
+        <title>{% if page.title %}{{ page.title | append: " - " | append: site.title }}{% else %}{{ site.title }}{% endif %}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.harmono.description }}{% endif %}">
-        <!-- OpenGraph -->
-        <meta property="og:title" content="{% if page.title %}{{ page.title | append: " - " | append: site.harmono.name }}{% else %}{{ site.harmono.name }}{% endif %}" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-        {% if page.feature && page.feature.photo %}
-        {% endif %}
         <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+        <script type="text/javascript">
+          var host = "{{ site.enforce_ssl }}";
+          if ((host == window.location.host) && (window.location.protocol != "https:")) {
+            console.log("Redirect to https...");
+            window.location.protocol = "https";
+          }
+        </script>
 
         <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/main.css">
@@ -20,22 +21,16 @@
         <!-- Modernizr js -->
         <script async src="{{ site.baseurl }}/assets/js/modernizr.js"></script>
 
-        {% if page.feature and page.feature.photo %}
-        {% assign protocol_of_photo_url = page.feature.photo_url | split: ':' | first %}
-        {% if protocol_of_photo_url != 'http' and protocol_of_photo_url != 'https' %}
-        {% assign real_photo_url = page.feature.photo_url | prepend: '/' | prepend: site.baseurl | prepend: site.url %}
-        {% endif %}
+        {% if page.image %}
         <script>
         var featurePhoto = {
-          photoUrl:   "{%if real_photo_url %}{{ real_photo_url }}{% else %}{{ page.feature.photo_url }}{% endif %}",
-          creator:    "{{ page.feature.creator }}",
-          creatorUrl: "{{ page.feature.creator_url }}",
-          license:    "{{ page.feature.license }}",
-          licenseUrl: "{{ page.feature.license_url }}"
+          photoUrl:   "{{ page.image }}",
+          creator:    "{{ page.image_info.creator }}",
+          creatorUrl: "{{ page.image_info.creator_url }}",
+          license:    "{{ page.image_info.license }}",
+          licenseUrl: "{{ page.image_info.license_url }}"
         };
         </script>
-        <!-- OpenGraph for image -->
-        <meta property="og:image" content="{% if real_photo_url %}{{ real_photo_url }}{% else %}{{ page.feature.photo_url }}{% endif %}" />
         {% endif %}
 
         <!-- IE Fixes -->
@@ -49,24 +44,14 @@
         <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <!-- jekyll-feed support -->
         {% feed_meta %}
+        <!-- jekyll-seo-tag -->
+        {% seo title=false %}
     </head>
 
     <body class="{{ site.harmono.basetheme }}">
         <div id="page-wrapper">
             {{ content }}
         </div>
-        <script type="text/javascript">
-          /* To avoid render blocking css */
-          var cb = function() {
-            var l = document.createElement('link'); l.rel = 'stylesheet';
-            l.href = 'https://fonts.googleapis.com/css?family=Ubuntu+Mono&subset=latin';
-            var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-          };
-          var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-              webkitRequestAnimationFrame || msRequestAnimationFrame;
-          if (raf) raf(cb);
-          else window.addEventListener('load', cb);
-        </script>
         <!-- jQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- When no internet load JQuery from local -->
