@@ -485,7 +485,6 @@ header.main-header {
 }
 footer.main-footer {
   padding: 1em 0;
-  @include MQ(M) { padding: 2em 0; }
 }
 .page-content {
   background-color: white;
