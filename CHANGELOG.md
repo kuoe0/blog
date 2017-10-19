@@ -1,3 +1,8 @@
+## v0.7.1.1
+- Hot fixed:
+  - style of codeblock
+  - redundant div in the archive page
+
 ## v0.7.1
 - Bugs fixed:
   - `background-size: cover` on mobile
