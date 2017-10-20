@@ -1,6 +1,23 @@
 'use strict'
 
+$(window).load(function(){
+  function unveilImages() {
+    $('.post-content img').each((i, img) => {
+      $(img).unveil();
+    });
+  }
+  unveilImages();
+});
+
 jQuery(document).ready(function($){
+
+  function initLazyImagesLoading() {
+    $('.post-content img').each((i, img) => {
+      $(img).attr('data-src', $(img).attr('src'));
+      $(img).attr('src', loadingAnimationURL);
+    });
+  }
+  initLazyImagesLoading();
 
   function switchNavbarBackground() {
     // Remove bg-color of navbar when it is on the feature photo. Otherwise, add
@@ -50,4 +67,5 @@ jQuery(document).ready(function($){
   }
 
   setFeaturePhoto();
+
 });
