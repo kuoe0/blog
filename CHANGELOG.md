@@ -1,3 +1,6 @@
+## v0.8
+- Implement lazy loading for images
+
 ## v0.7.1.1
 - Hot fixed:
   - style of codeblock
