@@ -3,7 +3,7 @@
 $(window).load(function(){
   function unveilImages() {
     $('.post-content img').each((i, img) => {
-      $(img).unveil();
+      $(img).unveil(500);
     });
   }
   unveilImages();
