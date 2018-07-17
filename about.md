@@ -4,8 +4,9 @@ title:     "關於我"
 permalink: /about/
 ---
 
-Hi, I am Chih-Hsuan Kuo (a.k.a. KuoE0 / Tommy Kuo). I'm a software engineer that works on Gecko (the browser engine of Mozilla Firefox) in Mozilla.
+Hi, I am Chih-Hsuan Kuo (a.k.a. KuoE0) who is also...
 
-### Contact me
-
-Find me on [Github](https://github.com/kuoe0).
+- C/C++ developer
+- open-source lover
+- script enthusiast
+- software engineer in Google
