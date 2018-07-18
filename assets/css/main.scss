@@ -68,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   // mobile first
-  @include font-size(20px);
+  @include font-size(22px);
   @include MQ(M) {
     @include font-size(36px);
   }
@@ -76,30 +76,30 @@ h1 {
 
 h2 {
   // mobile first
-  @include font-size(18px);
+  @include font-size(20px);
   @include MQ(M) {
     @include font-size(32px);
   }
 }
 
 h3 {
-  @include font-size(15px);
+  @include font-size(18px);
   @include MQ(M) {
-    @include font-size(30px);
+    @include font-size(24px);
   }
 }
 
 h4 {
   @include font-size(16px);
   @include MQ(M) {
-    @include font-size(24px);
+    @include font-size(18px);
   }
 }
 
 h5 {
   @include font-size(14px);
   @include MQ(M) {
-    @include font-size(22px);
+    @include font-size(16px);
   }
 }
 
