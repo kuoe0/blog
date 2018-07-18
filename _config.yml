@@ -8,9 +8,9 @@ enforce_ssl: "blog.kuoe0.tw"
 baseurl: ""
 
 # Site Title
-title: KuoE0's Dots
+title: kuoe0's dots
 # Little description about your site
-description: Connect the dots in the future.
+description: connect the dots in the future
 
 # Harmono theme configuration. Please change accordingly.
 harmono:
